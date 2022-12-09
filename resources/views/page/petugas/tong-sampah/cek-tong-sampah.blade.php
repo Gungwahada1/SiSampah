@@ -8,10 +8,18 @@
             <div class="card">
                 <div class="card-body">
                     <div class="card-title">
-                        <h4>Cek Tong Sampah
+                        <h4 class="pb-3">Cek Tong Sampah
                         </h4>
                     </div>
-                    <div class="table-responsive">
+                    <div class="col-md-6 col-lg-4 p-2 bg-info rounded-left rounded-right">
+                        <a href="https://thingspeak.com/channels/1974631" class="text-white pt-2 pb-1">Tong
+                            Sampah
+                            Kantor Perbekel Saba
+                            <p class="text-white">Jl. Pantai Saba, Saba, Kec. Blahbatuh, Gianyar, Bali</p>
+                        </a>
+                    </div>
+                </div>
+                {{-- <div class="table-responsive">
                         <table class="table table-borderd table-hover zero-configuration">
                             <thead>
                                 <tr>
@@ -24,8 +32,8 @@
                                     <th>Tanggal</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                {{-- {{ $no = 1 }}
+                            <tbody> --}}
+                {{-- {{ $no = 1 }}
                                 @foreach ($data as $dt)
                                     {{ $total = DB::table('tabungan')->join('users', 'users.id', '=', 'tabungan.id_user')->select(\DB::RAW('sum(jml_tabungan) as jml_tabungan'))->where('tabungan.id_user', $dt->id)->first();
                                     $penarikan = DB::table('penarikan_tabungan')->join('users', 'users.id', '=', 'penarikan_tabungan.id_user')->select(\DB::RAW('sum(jml_penarikan) as jml_penarikan'))->where('penarikan_tabungan.id_user', $dt->id)->first();
@@ -48,13 +56,13 @@
                                     {{ $no++ }}
                                     @include('page/petugas/tabungan/tarik')
                                 @endforeach --}}
-                            </tbody>
+                {{-- </tbody>
                         </table>
-                    </div>
-                </div>
+                    </div> --}}
             </div>
-            <!-- /# card -->
         </div>
-        <!-- /# column -->
+        <!-- /# card -->
+    </div>
+    <!-- /# column -->
     </div>
 @endsection
